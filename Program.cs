@@ -43,3 +43,22 @@ Console.WriteLine("\nTask 38");
 // максимальным и минимальным элементов массива.
 // [3, 7, 22, 2, 78] -> 76
 // NB: вещественные числа, это плавающие числа типа double.
+
+double[] array3 = new double[9];
+
+double maxElement = array3[0];
+double minElement = array3[0];
+
+for (int i=0; i<array3.Length; i++)
+{
+    array3[i] = new Random().Next(-100, 101);
+    Console.Write(array3[i] + "; ");
+
+    if (array3[i] > maxElement) maxElement = array3[i];
+    if (array3[i] < minElement) minElement = array3[i];
+}
+
+double result = maxElement - minElement;
+
+Console.WriteLine($"\nThe max element in the array: {maxElement}, and the min: {minElement}.");
+Console.WriteLine($"The difference between them equals {result}.");
