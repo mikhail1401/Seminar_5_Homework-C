@@ -46,12 +46,13 @@ Console.WriteLine("\nTask 38");
 
 double[] array3 = new double[9];
 
-double maxElement = array3[0];
-double minElement = array3[0];
+double maxElement = double.MinValue;
+double minElement = double.MaxValue;
 
 for (int i=0; i<array3.Length; i++)
 {
-    array3[i] = new Random().Next(-100, 101);
+    // array3[i] = (new Random().NextDouble() * 100);
+    array3[i] = (new Random().NextDouble() + new Random().Next(-100, 101));
     Console.Write(array3[i] + "; ");
 
     if (array3[i] > maxElement) maxElement = array3[i];
